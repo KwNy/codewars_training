@@ -1,0 +1,17 @@
+https://www.codewars.com/kata/5a3e1319b6486ac96f000049/train/javascript
+
+function pairs(arr){
+  console.log(arr)
+  let count = 0;
+
+  for (let i = 0; i+1 < arr.length; i+=2) {
+
+
+    let result = Math.abs(arr[i]) - Math.abs(arr[i + 1])
+
+    if (Math.abs(result) === 1) {
+      count++;
+    }
+  }
+  return count
+  }
