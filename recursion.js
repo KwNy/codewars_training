@@ -28,3 +28,11 @@ function productOfArray(arr){
     
     return arr[0]*productOfArray(arr.slice(1)) 
 }
+function recursiveRange(num){
+    if(num === 1){
+        return 1
+    }
+    
+    return num+recursiveRange(num -1)
+   
+}
