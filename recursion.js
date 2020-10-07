@@ -61,3 +61,23 @@ function reverse(str){
 
 // reverse('awesome') // 'emosewa'
 // reverse('rithmschool') // 'loohcsmhtir'
+
+function isPalindrome(word){
+  // add whatever parameters you deem necessary - good luck!
+  if(word.length === 1){
+      return true
+  }else {
+      let lastChar = word[word.length -1]
+      let firstChar = word[0]
+      
+      if(lastChar !== firstChar) {
+          return false
+      }
+      
+      
+  }
+  
+  return isPalindrome(word.slice(1,-1))
+  
+ 
+}
