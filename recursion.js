@@ -81,3 +81,19 @@ function isPalindrome(word){
   
  
 }
+
+function someRecursive(arr, cb){
+  // add whatever parameters you deem necessary - good luck!
+  
+  if(arr.length === 0){
+      return false
+  }
+  
+  
+  if(cb(arr[0]) ){
+     
+      return true
+  }
+  
+ return someRecursive(arr.slice(1), cb)
+}
