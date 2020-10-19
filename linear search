@@ -1,0 +1,18 @@
+Linear search 
+- check every element 
+- indexOf, findIndex, find, includes
+
+function linearSearch(arr,num){
+   let output = -1;  
+  // add whatever parameters you deem necessary - good luck!
+  arr.forEach((el, indx) => {
+
+    
+      if(el === num){
+            console.log(el)
+          output = indx
+          return output
+      }
+  })
+  return output
+}
