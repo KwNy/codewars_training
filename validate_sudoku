@@ -2,8 +2,10 @@
  * @param {character[][]} board
  * @return {boolean}
  */
- //https://leetcode.com/problems/valid-sudoku/
- 
+
+let data = 
+[[".",".",".",".","5",".",".","1","."],[".","4",".","3",".",".",".",".","."],[".",".",".",".",".","3",".",".","1"],["8",".",".",".",".",".",".","2","."],[".",".","2",".","7",".",".",".","."],[".","1","5",".",".",".",".",".","."],[".",".",".",".",".","2",".",".","."],[".","2",".","9",".",".",".",".","."],[".",".","4",".",".",".",".",".","."]]
+;
 var isValidSudoku = function (board) {
   let mySet = new Set();
 
@@ -15,14 +17,14 @@ var isValidSudoku = function (board) {
       if (value !== ".") {
         let seenInRow = `${value} in row ${i}`;
         let seenInColumn = `${value} in column ${j}`;
-        let seenInSubBox = `${value} in subBox ${i / 3}${j / 3}`;
+        let seenInSubBox = `${value} in subBox ${Math.floor(i / 3)} ${Math.floor(j/3)}`;
 
-        console.log(value);
         if (
           mySet.has(seenInRow) ||
           mySet.has(seenInColumn) ||
           mySet.has(seenInSubBox)
         ) {
+            
           return false;
         }
         mySet.add(seenInRow);
