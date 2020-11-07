@@ -1,0 +1,23 @@
+function search(nums, target) {
+  let left = 0;
+  let right = nums.length - 1;
+
+  while (left <= right) {
+    const range = left + right;
+    const mid = Math.floor(range / 2);
+
+    if (target === nums[mid]) {
+      return mid;
+    }
+
+    if (target > nums[mid]) {
+      left = mid + 1;
+    }
+
+    if (target < nums[mid]) {
+      right = mid - 1;
+    }
+  }
+
+  return -1;
+}
